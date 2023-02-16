@@ -102,23 +102,31 @@ class StrategyChallenge:
 
     def get_reagents(self, comp = None):
         comp = comp or self.current
-        l = []
-        for r in list(REACTIONS[comp]):
-            prod = REACTIONS[comp][r]
-            if prod in self.finals:
-                l.append(r)
-
+        try:
+            l = list(REACTIONS[comp])
+        except KeyError:
+            l = ["Game over, dead end!"]
+            
         random.shuffle(l)
         return l[:6]
 
     def update(self, reagent):
-        self.current = REACTIONS[self.current][reagent]
+        try:
+            self.current = REACTIONS[self.current][reagent]
+        except KeyError:
+            print("Game over!")
+            self.winner = "No one!"
+            return
+
+
         if self.targets[self.turn] == self.current:
             print(self.turn, "wins")
             self.winner = self.turn
             return
         
         self.turn = next(self.playerCycle)
+
+
 
     @property
     def challenge_data(self):
@@ -166,5 +174,5 @@ class Game:
     def strategy_update(self, reagent):
         self.current_challenge.update(reagent)
 
-        if self.current_challenge.winner:
+        if self.current_challenge.winner and self.current_challenge.winner != "No one!":
             self.points_table[self.current_challenge.winner] += 100
