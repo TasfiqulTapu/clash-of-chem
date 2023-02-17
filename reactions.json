@@ -17,7 +17,13 @@
   },
   "propane": {
     "Cl / uv": "2-chloropropane",
-    "Br / uv": "2-bromopropane"
+    "Br / uv": "2-bromopropane",
+    "O2": "carbon dioxide"
+  },
+  "butane": {
+    "Cl / uv": "2-chlorobutane",
+    "Br / uv": "2-bromobutane",
+    "O2": "carbon dioxide"
   },
   "ethene": {
     "HCl": "chloroethane",
@@ -71,7 +77,7 @@
     "NaI": "iodomethane",
     "AgF": "fluoromethane",
     "CH3ONa": "methoxymethane",
-    "NH3 excess": "methylamine",
+    "NH3 excess": "methanamine",
     "Red P / HI": "methane",
     "Red P / HBr": "methane",
     "Mg": "methyl magnesium chloride"
@@ -87,7 +93,7 @@
     "NaI": "iodomethane",
     "AgF": "fluoromethane",
     "CH3ONa": "methoxymethane",
-    "NH3 excess": "methylamine",
+    "NH3 excess": "methanamine",
     "Red P / HI": "methane",
     "Red P / HBr": "methane",
     "Mg": "methyl magnesium bromide"
@@ -102,7 +108,7 @@
     "Na / dry ether": "ethane",
     "AgF": "fluoromethane",
     "CH3ONa": "methoxymethane",
-    "NH3 excess": "methylamine",
+    "NH3 excess": "methanamine",
     "Red P / HI": "methane",
     "Red P / HBr": "methane",
     "Mg": "methyl magnesium chloride"
@@ -119,7 +125,7 @@
     "NaI": "iodoethane",
     "AgF": "fluoroethane",
     "CH3ONa": "methoxyethane",
-    "NH3 excess": "ethylamine",
+    "NH3 excess": "ethanamine",
     "Red P/ HI": "ethane",
     "Red P/ HBr": "ethane",
     "Mg": "ethyl magnesium chloride",
@@ -137,7 +143,7 @@
     "NaI": "iodoethane",
     "AgF": "fluoroethane",
     "CH3ONa": "methoxyethane",
-    "NH3 excess": "ethylamine",
+    "NH3 excess": "ethanamine",
     "Red P / HI": "ethane",
     "Red P / HBr": "ethane",
     "Mg": "ethyl magnesium bromide",
@@ -154,7 +160,7 @@
     "Na / dry ether": "butane",
     "AgF": "fluoroethane",
     "CH3ONa": "methoxyethane",
-    "NH3 excess": "ethylamine",
+    "NH3 excess": "ethanamine",
     "Red P/ HI": "ethane",
     "Red P/ HBr": "ethane",
     "Mg": "ethyl magnesium chloride",
@@ -231,11 +237,22 @@
     "aq KOH": "ethane-1,2-diol",
     "alc. KOH / NaNH2": "ethyne"
   },
+  "1,2-dibromopropane": {
+    "alc. KOH / NaNH2": "propyne"
+  },
+  "2-chlorobutane": {
+    "alc. KOH": "but-2-ene",
+    "t-BuONa": "but-1-ene"
+  },
+  "2-bromobutane": {
+    "alc. KOH": "but-2-ene",
+    "t-BuONa": "but-1-ene"
+  },
   "ethanenitrile": {
     "SnCl2 / HCl / H2O": "ethanal",
     "DIBAL-H": "ethanal",
     "CH3MgBr / H+": "propanone",
-    "H2 / Pd": "ethylamine",
+    "H2 / Pd": "ethanamine",
     "H3O+ (partial)": "ethanamide",
     "H3O+": "ethanoic acid"
   },
@@ -286,6 +303,11 @@
     "PCl5": "1-chloropropane",
     "KMnO4 / H+": "propanoic acid",
     "PCC": "propanal",
+    "conc H2SO4": "propene"
+  },
+  "propan-2-ol": {
+    "PCl5": "2-chloropropane",
+    "PCC": "propanone",
     "conc H2SO4": "propene"
   },
   "methanal": {
@@ -366,6 +388,17 @@
     "Red P / Br2": "bromoethanoic acid",
     "Red P / I2": "iodoethanoic acid"
   },
+  "propanoic acid": {
+    "LiAlH4": "propan-1-ol",
+    "PCl5": "propanoyl chloride",
+    "PCl3": "propanoyl chloride",
+    "SOCl2": "propanoyl chloride",
+    "Na": "sodium propanoate",
+    "NH3 / H2O (Heat)": "propanamide",
+    "Red P/ HI": "propane",
+    "NH3 / conc. H2SO4": "propan-1-amine",
+    "MnO (573K)": "propan-1-ol"
+  },
   "methanamide": {
     "Br2 / aq. NaOH": "ammonia",
     "NaOH / H+": "methanoic acid",
@@ -378,6 +411,12 @@
     "LiAlH4": "ethanamine",
     "P2O5": "ethanenitrile"
   },
+  "propanamide": {
+    "Br2 / aq. NaOH": "ethanamine",
+    "NaOH / H+": "propanoic acid",
+    "LiAlH4": "propan-1-amine",
+    "P2O5": "propanenitrile"
+  },
   "methanoyl chloride": {
     "H2O": "methanoic acid",
     "NH3 excess": "methanamide"
@@ -387,6 +426,10 @@
     "NH3 excess": "ethanamide",
     "sodium ethoxide": "ethylethanoate"
   },
+  "propanoyl chloride": {
+    "H2O": "propanoic acid",
+    "NH3 excess": "propanamide"
+  },
   "methanamine": {
     "CH3COCl": "N-methylacetamide",
     "NaNO2 / HCl": "methanol"
@@ -394,6 +437,10 @@
   "ethanamine": {
     "CH3COCl": "N-ethylacetamide",
     "NaNO2 / HCl": "ethanol"
+  },
+  "propan-1-amine": {
+    "CH3COCl": "N-propylacetamide",
+    "NaNO2 / HCl": "propan-1-ol"
   },
   "benzene": {
     "Cl2 / Fe": "chlorobenzene",
@@ -422,6 +469,12 @@
     "NH3 / Cu2O catalyst (60 atm, 523-773K)": "aniline",
     "Na / Dry Ether": "biphenyl",
     "CH3ONa": "anisole"
+  },
+  "anisole": {
+    "HI": "phenol",
+    "Br2 / CH3COOH": "4-bromoanisole",
+    "conc. HNO3 / conc. H2SO4": "4-nitroanisole",
+    "CH3Cl / anhyd. AlCl3 / CS2": "4-methoxytoluene"
   },
   "phenol": {
     "Zn": "benzene",
